@@ -30,23 +30,24 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
       <div className={styles.container}>
 
         <Head>
-          <title>Início | Move.it</title>
+            <title>Início | Move.it</title>
+            <meta name="description" content="O Move.it é um App que utiliza a técnica de pomodoro, com o objetivo de melhorar sua produtividade e foco." />
         </Head>
 
-        <ExperienceBar />
+          <ExperienceBar />
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </ CountdownProvider >
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </ CountdownProvider >
       </div>
     </ChallengesProvider>
   )
@@ -54,11 +55,11 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies
+  const { level, currentExperience, challengesCompleted} = ctx.req.cookies
 
   return {
-    props: {
-      level: Number(level),
+        props: {
+        level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted)
     }
