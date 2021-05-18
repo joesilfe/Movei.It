@@ -1,0 +1,21 @@
+{
+    "name": "Move.it - Promodoro",
+    "short_name": "Move.it",
+    "icons": [
+      {
+        "src": "/favicon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/favicon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "background_color": "#06092B",
+    "description": "O Move.it é um App que utiliza a técnica de pomodoro, com o objetivo de melhorar sua produtividade e foco.",
+    "display": "fullscreen",
+    "start_url": "/",
+    "theme_color": "#06092B"
+  }
