@@ -93,6 +93,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
     }
 
     useEffect(() => {
+        // Criar componente que pergunta ao usuário se pode habilitar a notificação.
         Notification.requestPermission()
     }, [])
 
