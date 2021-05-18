@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn createSitemap && next build",
     "start": "next start",
-    "deploy": "yarn build && next export",
+    "deploy": "yarn build && yarn next export",
     "createSitemap": "yarn next-sitemap"
   },
   "dependencies": {

@@ -11,9 +11,6 @@ export default class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <meta name="theme-color" content="#4953b8"/>
                     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
-                    <meta name='viewport' content=' maximum-scale=5, minimum-scale=1, initial-scale=1.0, width=device-width, shrink-to-fit=no, viewport-fit=cover' />
-                    <link rel="canonical" href="https://moveit-joesilfe.vercel.app/"/>
-
                 </Head>
                 <body>
                     <Main />
