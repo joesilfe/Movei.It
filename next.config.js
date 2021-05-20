@@ -7,3 +7,15 @@ module.exports = withPWA({
         disable: !isProd
     }
 })
+
+module.exports = {
+    async redirects() {
+      return [
+        {
+          source: '/',
+          destination: '/pomodoro',
+          permanent: true,
+        },
+      ]
+    },
+  }

@@ -1,25 +1,22 @@
-import Head from 'next/head';
+
+import { useEffect, ReactNode } from 'react'
+
 import { GetServerSideProps } from 'next'
 
-import { CompletedChallenges } from "../components/CompletedChallenges";
-import { Countdown } from "../components/Countdown";
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from "../components/Profile";
-import { ChallengeBox } from "../components/ChallengeBox";
+import { Navigation } from '../components/Navigation';
 
-import { CountdownProvider } from '../contexts/CountdownContext';
-
-
-import styles from '../styles/pages/Home.module.css'
 import { ChallengesProvider } from '../contexts/ChallegensContext';
 
+import styles from '../styles/pages/Home.module.css'
+
 type HomeProps = {
-  level: number,
-  currentExperience: number,
-  challengesCompleted: number
+  level?: number,
+  currentExperience?: number,
+  challengesCompleted?: number,
+  children: ReactNode,
 }
 
-export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
+export default function Home({ level, currentExperience, challengesCompleted, children }: HomeProps) {
 
   return (
     <ChallengesProvider
@@ -28,26 +25,14 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
       challengesCompleted={challengesCompleted}
     >
       <div className={styles.container}>
+        <aside>
+          <Navigation />
+        </aside>
 
-        <Head>
-          <title>Início | Move.it</title>
-          <meta name="description" content="O Move.it é um App que utiliza a técnica de pomodoro, com o objetivo de melhorar sua produtividade e foco." />
-        </Head>
 
-        <ExperienceBar />
-
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </ CountdownProvider >
+        <article>
+          {children}
+        </article>
       </div>
     </ChallengesProvider>
   )
