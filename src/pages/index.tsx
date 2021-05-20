@@ -30,9 +30,9 @@ export default function Home({ level, currentExperience, challengesCompleted, ch
         </aside>
 
 
-        <article>
+        <main>
           {children}
-        </article>
+        </main>
       </div>
     </ChallengesProvider>
   )

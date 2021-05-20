@@ -14,13 +14,13 @@
     filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.05));
 }
 
-.container article {
+.container main {
     max-width: 992px;
     margin: 0 auto;
     padding: 2rem 2rem;
 }
 
-.container article section {
+.container main section {
     flex: 1;
 
     display: grid;

@@ -9,7 +9,7 @@ export function Navigation() {
     return (
         <div className={styles.navigationContainer}>
             <header>
-                <img src="/icons/logo.svg" alt="" />
+                <img src="/icons/logo.svg" alt="icone  Move.it" />
             </header>
 
             <nav>
