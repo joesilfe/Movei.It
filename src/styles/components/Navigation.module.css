@@ -24,7 +24,7 @@
 }
 
 
-.navigationContainer li a {
+.navigationContainer li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,22 +34,30 @@
     height: 3.5rem;
 
     list-style: none;
-    border-radius: 0.5rem;
-    /* border: 1px solid #000; */   
+    border-radius: 0.5rem;    
+ 
+}
+
+.navigationContainer li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 50%;
 
     transition: height 0.1s;
+}
 
+.navigationContainer li a:hover{
+    height: 100%;
+}
+
+.navigationContainer .navigationSelected > span{
+    opacity: 0;
 }
 
 .navigationContainer li a span{
-    height: 50%;
-    width: 0.25rem;
-
-    background: var(--blue);
-    border-radius: 0 1rem 1rem 0;
-}
-
-.navigationContainer li a ~ span:hover{
     height: 100%;
     width: 0.25rem;
 
