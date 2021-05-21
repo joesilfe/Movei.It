@@ -1,0 +1,7 @@
+.containerRanked, .containerRanked ul, .containerRanked ul > li {
+    border: 1px solid red;
+}
+
+.containerRanked {
+    
+}

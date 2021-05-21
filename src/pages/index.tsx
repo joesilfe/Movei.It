@@ -1,5 +1,5 @@
 
-import { useEffect, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 import { GetServerSideProps } from 'next'
 
@@ -16,7 +16,7 @@ type HomeProps = {
   children: ReactNode,
 }
 
-export default function Home({ level, currentExperience, challengesCompleted, children }: HomeProps) {
+export default function Index({ level, currentExperience, challengesCompleted, children }: HomeProps) {
 
   return (
     <ChallengesProvider
@@ -28,7 +28,6 @@ export default function Home({ level, currentExperience, challengesCompleted, ch
         <aside>
           <Navigation />
         </aside>
-
 
         <main>
           {children}
